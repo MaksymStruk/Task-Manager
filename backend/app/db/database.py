@@ -49,7 +49,7 @@ def create_celery_engine() -> AsyncEngine:
     return create_async_engine(
         settings.DATABASE_URL,
         pool_pre_ping=True,
-        poolclass=None,  # Disable connection pooling for one-time use
+        poolclass=None,
     )
 
 @asynccontextmanager
@@ -77,15 +77,11 @@ async def get_celery_async_session_context():
         await engine.dispose()
 
 def get_celery_async_session() -> AsyncSession:
-    """Backward compatibility - creates session with shared engine (deprecated).
+    """Backward compatibility - creates session with shared engine.
     
     Returns:
-        AsyncSession: Database session (deprecated, use context manager instead)
-        
-    Warning:
-        This function is deprecated. Use get_celery_async_session_context() instead.
+        AsyncSession: Database session
     """
-    logger.warning("[Database] Using deprecated get_celery_async_session()")
     engine = create_celery_engine()
     session_maker = sessionmaker(
         bind=engine,
