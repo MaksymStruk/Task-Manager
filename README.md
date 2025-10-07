@@ -41,7 +41,7 @@ cd Task_Manager
 
 ### 2. Start the Application
 ```bash
-docker-compose up --build --detach
+docker compose up --build --detach
 ```
 
 ### 3. Access the Application
