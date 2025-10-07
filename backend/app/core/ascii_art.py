@@ -1,3 +1,5 @@
+"""ASCII art for application startup display."""
+
 ASCII_ART = """
 ⠀⠀⠀⠀   ⠀⠀⠀ ⠀⠀⢠⠏⡆⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⡀
 ⠀⠀⠀⠀⠀⡟⢦⡀ ⠀⠀⣀⠞⠀⠀⠘⡀⢀⡠⣉⠤⠂⠀⠀⠀⠈⠙⢦⡀

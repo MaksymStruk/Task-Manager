@@ -1,5 +1,12 @@
-from loguru import logger
+"""Custom logging configuration using Loguru.
+
+This module configures structured logging with multiple outputs:
+file logging, error logging, and console output with colorization.
+"""
+
 import sys
+
+from loguru import logger
 
 handlers = [
     {
@@ -35,12 +42,16 @@ handlers = [
 logger.configure(handlers=handlers)
 
 def logger_test():
-    logger.trace("Тестове TRACE повідомлення")
-    logger.debug("Тестове DEBUG повідомлення")
-    logger.info("Тестове INFO повідомлення")
-    logger.success("Тестове SUCCESS повідомлення")
-    logger.warning("Тестове WARNING повідомлення")
-    logger.error("Тестове ERROR повідомлення")
-    logger.critical("Тестове CRITICAL повідомлення")
+    """Test all logging levels to verify configuration.
+
+    This function logs messages at all levels to test the logging setup.
+    """
+    logger.trace("Test TRACE message")
+    logger.debug("Test DEBUG message")
+    logger.info("Test INFO message")
+    logger.success("Test SUCCESS message")
+    logger.warning("Test WARNING message")
+    logger.error("Test ERROR message")
+    logger.critical("Test CRITICAL message")
 
 custom_logger = logger

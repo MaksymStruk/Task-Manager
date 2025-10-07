@@ -37,9 +37,9 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/taskmanager
-      - REDIS_URL=redis://redis:6379/0
       - PYTHONPATH=/backend/app
     volumes:
       - ./backend:/backend
@@ -53,9 +53,9 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/taskmanager
-      - REDIS_URL=redis://redis:6379/0
       - PYTHONPATH=/backend/app
     volumes:
       - ./backend:/backend
@@ -70,9 +70,9 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/taskmanager
-      - REDIS_URL=redis://redis:6379/0
       - PYTHONPATH=/backend/app
     volumes:
       - ./backend:/backend
