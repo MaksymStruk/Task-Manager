@@ -36,7 +36,7 @@ A modern, async task management system built with FastAPI, Celery, and PostgreSQ
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/MaksymStruk/Task-Manager.git
-cd Task_Manager
+cd Task-Manager
 ```
 
 ### 2. Start the Application
